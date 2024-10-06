@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f39c12, #e74c3c);
+  color: #fff;
+  padding: 10px;
+}
+
+.game-container {
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 36px;
+  color: #e74c3c;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+}
+
+.score h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.choices {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.choice img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border: 3px solid #2c3e50;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.choice:hover img {
+  transform: scale(1.2);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.choice:hover {
+  background-color: #3498db;
+  border-radius: 50%;
+}
+
+.results {
+  margin-top: 30px;
+  background-color: #3498db;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+#result {
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+#player-choice,
+#computer-choice {
+  font-weight: bold;
+  font-size: 20px;
+  color: #e74c3c;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Media Queries for Tablets */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .score h2 {
+    font-size: 20px;
+  }
+
+  .choices {
+    gap: 15px;
+  }
+
+  .choice img {
+    width: 100px;
+    height: 100px;
+  }
+
+  #result {
+    font-size: 20px;
+  }
+
+  .results {
+    padding: 15px;
+  }
+}
+
+/* Media Queries for Mobile Phones */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .game-container {
+    padding: 20px;
+  }
+
+  .score h2 {
+    font-size: 18px;
+  }
+
+  .choices {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .choice img {
+    width: 80px;
+    height: 80px;
+  }
+
+  #result {
+    font-size: 18px;
+  }
+
+  .results {
+    padding: 10px;
+  }
+}
