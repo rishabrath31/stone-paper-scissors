@@ -56,25 +56,29 @@ h1 {
   gap: 20px;
 }
 
+.choice {
+  border: 3px solid #2c3e50;
+  border-radius: 50%;
+  overflow: hidden; /* Ensures images don't overflow */
+  transition: background-color 0.3s ease;
+  padding: 5px; /* Padding around images */
+  cursor: pointer;
+}
+
 .choice img {
   width: 120px;
   height: 120px;
-  object-fit: contain;
-  border: 3px solid #2c3e50;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease,
-    background-color 0.3s ease;
+  object-fit: cover; /* Ensure images fit properly */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.choice:hover img {
-  transform: scale(1.2);
+.choice:active {
+  background-color: #3498db; /* Change background on active */
+}
+
+.choice:active img {
+  transform: scale(1.1); /* Slightly enlarge the image */
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.choice:hover {
-  background-color: #3498db;
-  border-radius: 50%;
 }
 
 .results {
